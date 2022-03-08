@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Github Traffic</title>
+    <meta name="theme-color" content="#523169">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <form id="form">
+      <input type="text" class="topbar" id="nameInput" placeholder="Enter a repository name..."></input>
+      <button id="searchButton" type="submit">Search</button>
+    </form>
+    <p id="error"></p>
+    <h1 id="mainText"></h1><a id="mainLink"></a>
+    <p id="note" style="color: grey"></p>
+    <p id="total"></p>
+    <div>
+      <canvas id="repo-canvas" aria-label="Github views" role="img"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src='/js/script.js'></script>
+  </body>
+</html>
