@@ -12,6 +12,6 @@ to whatever repository title (without the author) you want to be the default one
 ## Run
 `node index.js` in the shell
 ## Shields.io badge
-If you want a cool shields.io badge like this: ![Github Views on this repo](https://img.shields.io/endpoint?color=github&logo=github&style=flat-square&url=https%3A%2F%2Fgithub-traffic.s40.repl.co%2Fapi%2Fviews%2Fgithub-traffic-site%2Fshields), just go to [this website](https://shields.io/endpoint) and put in this url: `https://YOURDOMAIN/api/views/REPO/shields` in the form on the bottom. You can do the normal shields.io customization.
+If you want a cool shields.io badge like this: ![Github Views on this repo](https://img.shields.io/endpoint?color=github&logo=github&style=flat-square&url=https%3A%2F%2Fgithub-traffic.s40.repl.co%2Fapi%2Fviews%2Fgithub-traffic-site%2Fshields), just go to [this website](https://shields.io/endpoint) and put this: `https://YOURDOMAIN/api/views/REPO/shields` in the url field in the form at the bottom. You can do the normal shields.io customization.
 ##
 ![Github Views on this repo](https://img.shields.io/endpoint?color=github&logo=github&style=flat-square&url=https%3A%2F%2Fgithub-traffic.s40.repl.co%2Fapi%2Fviews%2Fgithub-traffic-site%2Fshields)
