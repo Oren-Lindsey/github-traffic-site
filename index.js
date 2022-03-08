@@ -28,7 +28,27 @@ app.get('/api/views/:repo', (req, res) => {
       }
     })
 })
-
+app.get('/api/views/:repo/shields', (req, res) => {
+  const repo = req.params['repo'];
+  octokit.request('GET /repos/{owner}/{repo}/traffic/views', {
+    owner: owner,
+    repo: repo
+  })
+    .then(viewsData => {
+      const shieldsRes = {}
+      shieldsRes.schemaVersion = 1;
+      shieldsRes.label = `Github Views`;
+      shieldsRes.message = `${viewsData.data.count}`
+      res.send(shieldsRes)
+    })
+    .catch(function(err){
+      if (err.response.hasOwnProperty('data')) {
+        res.status(err.status).send({'error': err.response.data.message})
+      } else {
+        res.status(500).send({'error': err})
+      }
+    })
+})
 app.get('/api/default', (req, res) => {
   res.send({'default': defaultChart})
 })
@@ -39,5 +59,5 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/html/index.html');
 })
 app.listen(port, () => {
-  console.log(`Example app listening at https://github-traffic.s40.repl.co`)
+  console.log(`listening`)
 })
